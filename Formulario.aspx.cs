@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data.SqlTypes;
-using System.Security.Cryptography;
 
 public partial class Formulario : System.Web.UI.Page
 {
@@ -14,10 +12,5 @@ public partial class Formulario : System.Web.UI.Page
         Response.Redirect("Default.aspx");
     }
 
-    public void resposta(object sender, EventArgs e)
-    {
-    
-        
-    }
 
 }

@@ -16,21 +16,21 @@
         </tr>
         <tr>
         <td>
-            CPF</td>
+            Cargo</td>
         <td><asp:TextBox ID="txtDesignation" runat="server" CssClass="input300"></asp:TextBox></td>
         </tr>
         <tr>
-        <td>Usuário</td>
+        <td>Grau</td>
         <td><asp:TextBox ID="txtDegree" runat="server" CssClass="input300"></asp:TextBox></td>
         </tr>
         <tr>
         <td>
-            Estabelecimento</td>
+            Departamento</td>
         <td>
             <asp:DropDownList ID="ddlDepartment" runat="server" Style="width: 300px">
             </asp:DropDownList></td>
         </tr>
-           <%-- <tr>
+            <tr>
                 <td>
                     Data Admissão</td>
                 <td>
@@ -41,38 +41,38 @@
                     Confirmado em</td>
                 <td>
                     <asp:TextBox ID="txtDOC" runat="server" CssClass="input300"></asp:TextBox>&nbsp;<a href="javascript:NewCal('<%=txtDOC.ClientID %>','mmddyyyy')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
-            </tr>--%>
+            </tr>
             
             <tr>
                 <td>
                     Status</td>
                 <td><asp:DropDownList ID="ddlStatus" runat="server" Style="width: 300px">
-                    <asp:ListItem Value="1">Ativo</asp:ListItem>
-                    <asp:ListItem Value="0">Inativo</asp:ListItem>
+                    <asp:ListItem Value="1">Empregado</asp:ListItem>
+                    <asp:ListItem Value="0">Demitido ou Aposentado</asp:ListItem>
                 </asp:DropDownList></td>
             </tr>
-           <%-- <tr>
+            <tr>
                 <td align="center" colspan="2">
                     <strong>Dados Pessoais</strong></td>
-            </tr>--%>
-       <%-- <tr>
+            </tr>
+        <tr>
         <td>
             Nascimento</td>
         <td><asp:TextBox ID="txtDOB" runat="server" CssClass="input300"></asp:TextBox>&nbsp;<a href="javascript:NewCal('<%=txtDOB.ClientID %>','mmddyyyy')"><img src="images/cal.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
-        </tr>--%>
-<%--        <tr>
+        </tr>
+        <tr>
         <td>
             Endereço</td>
         <td><asp:TextBox ID="txtAddress" runat="server" CssClass="input300"></asp:TextBox>
             </td>
-        </tr>--%>
-<%--        <tr>
+        </tr>
+        <tr>
         <td>
             Cidade</td>
         <td><asp:TextBox ID="txtCity" runat="server" CssClass="input300"></asp:TextBox>
             </td>
-        </tr>--%>
-        <%--<tr>
+        </tr>
+        <tr>
         <td>
             Estado</td>
         <td><asp:TextBox ID="txtState" runat="server" CssClass="input300"></asp:TextBox>
@@ -107,7 +107,7 @@
                     Foto</td>
                 <td>
                     <asp:FileUpload ID="filePhoto" runat="server" CssClass="input300" /></td>
-            </tr>--%>
+            </tr>
             <tr>
                 <td align="center" colspan="2">
                     <strong>Comentários e observações<asp:TextBox ID="txtPhoto" runat="server" Visible="false"></asp:TextBox></strong></td>
