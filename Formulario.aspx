@@ -7,6 +7,7 @@
         <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </div>
 
+<<<<<<< HEAD
     <div class="title">
         FORMULÁRIO ACREDITAÇÃO<br />
         
@@ -40,6 +41,22 @@
                 <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Resultado" data-itemmenu="resultado">
             </div>
         </div>
+=======
+<<<<<<< HEAD
+        <title>acreditacao</title>
+
+        <div class="container my-5 text-center">
+            <div class="row-center">
+               <div class="text-center">                  
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Visão" data-itemmenu="visao">
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Infraestrutura" data-itemmenu="infraestrutura">
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Gestão" data-itemmenu="gestao">
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Processo" data-itemmenu="processo">             
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Resultado" data-itemmenu="resultado">               
+               </div>
+            </div>
+         </div>
+>>>>>>> e11967c80dd8afad630c71dbfaf531065a2bf39f
         <%--      <svg width="171.57745mm" height="12.817016mm" viewBox="0 0 171.57745 12.817016" version="1.1" id="svg1008" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
                 <defs id="defs1005"></defs>
                 <g id="layer1" transform="translate(-9.7782088,-82.323585)">
@@ -87,6 +104,16 @@
                     </g>
                 </g>
             </svg>--%>
+<<<<<<< HEAD
+=======
+=======
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+>>>>>>> parent of 36ea72e (html formulario pronto)
+>>>>>>> e11967c80dd8afad630c71dbfaf531065a2bf39f
     </head>
 
     <body>
@@ -96,6 +123,10 @@
                 let vpath = img.src;
                 const el = fetch(vpath).then((response) => {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e11967c80dd8afad630c71dbfaf531065a2bf39f
                     response.text().then(e => {
                         document.getElementById('porta_svg').innerHTML = e;
                     })
@@ -104,6 +135,7 @@
             }
         </script>
 
+<<<<<<< HEAD
         <div class="container my-5 text-center" id="porta_svg">
             <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
             <!-- Created with Inkscape (http://www.inkscape.org/) -->
@@ -111,6 +143,33 @@
 
         <div class="container my-5">
 
+=======
+
+        <div class="container my-5 text-center" id="porta_svg">
+            <!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+            <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+
+
+
+        </div>
+
+        <div class="row-center">
+            <div class="text-center">
+               <input type="button" onclick="allStorage(), limparAmbiente()" class="btn-white btn-sm" value="Enviar">
+            </div>         
+         </div>
+
+
+
+        <div class="container my-5">
+
+            <div class="fluid">
+            </div>
+
+
+
+>>>>>>> e11967c80dd8afad630c71dbfaf531065a2bf39f
             <div class="tab collapse show" id="tab1" style="">
                 <h3 class="sub_visao">Visão Geral</h3>
                 <div class="row">
@@ -395,6 +454,16 @@
                                     <label class="form-check-label">
                                         <input type="checkbox" class="form-check-input" id="S2_P4_C" value="Quantidade de estagiários insuficiente">Quantidade de estagiários insuficiente
                                     </label>
+<<<<<<< HEAD
+=======
+=======
+                        <div class='row'>
+                            <div class='col-12'>
+                                <div class='form-group'>
+                                    <label id='lbl_S1_P1'></label>
+                                    <textarea class='form-control' name='S1_P1' id='S1_P1'></textarea>
+>>>>>>> parent of 36ea72e (html formulario pronto)
+>>>>>>> e11967c80dd8afad630c71dbfaf531065a2bf39f
                                 </div>
                             </div>
                         </div>
