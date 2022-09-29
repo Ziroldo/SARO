@@ -25,15 +25,17 @@
 
         <title>acreditacao</title>
 
-        <div class="row-center">
-            <div class="text-center">
-                <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Visão" data-itemmenu="visao">
-                <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Infraestrutura" data-itemmenu="infraestrutura">
-                <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Gestão" data-itemmenu="gestao">
-                <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Processo" data-itemmenu="processo">
-                <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Resultado" data-itemmenu="resultado">
+        <div class="container my-5 text-center">
+            <div class="row-center">
+               <div class="text-center">                  
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Visão" data-itemmenu="visao">
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Infraestrutura" data-itemmenu="infraestrutura">
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Gestão" data-itemmenu="gestao">
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Processo" data-itemmenu="processo">             
+                  <input type="button" onclick="fnMostrar(this)" class="btn-primary btn-sm" value="Resultado" data-itemmenu="resultado">               
+               </div>
             </div>
-        </div>
+         </div>
         <%--      <svg width="171.57745mm" height="12.817016mm" viewBox="0 0 171.57745 12.817016" version="1.1" id="svg1008" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
                 <defs id="defs1005"></defs>
                 <g id="layer1" transform="translate(-9.7782088,-82.323585)">
@@ -109,10 +111,11 @@
 
         </div>
 
-        <div class="text-center">
-
-            <input type="button" onclick="allStorage(), limparAmbiente()" class="btn-info btn-lg" value="Enviar">
-        </div>
+        <div class="row-center">
+            <div class="text-center">
+               <input type="button" onclick="allStorage(), limparAmbiente()" class="btn-white btn-sm" value="Enviar">
+            </div>         
+         </div>
 
 
 
