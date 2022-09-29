@@ -26,7 +26,7 @@ public partial class Manage_Department_Add : System.Web.UI.Page
     {
         objDeparment.DepartmentId= DeparmentId;
         objDeparment.SelectById();
-        //txtName.Text = objDeparment.DepartmentName.ToString();
+        txtName.Text = objDeparment.DepartmentName.ToString();
     }
 
     protected void btnCancel_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ public partial class Manage_Department_Add : System.Web.UI.Page
 
     protected void btnSave_Click(object sender, EventArgs e)
     {
-       // objDeparment.DepartmentName = txtName.Text.Trim();
+        objDeparment.DepartmentName = txtName.Text.Trim();
         objDeparment.Insert();
         Response.Redirect("Manage-Department.aspx");
     }
@@ -44,7 +44,7 @@ public partial class Manage_Department_Add : System.Web.UI.Page
     protected void btnUpdate_Click(object sender, EventArgs e)
     {
         objDeparment.DepartmentId = Convert.ToInt32(Request["DeparmentId"].ToString());
-       // objDeparment.DepartmentName = txtName.Text.Trim();
+        objDeparment.DepartmentName = txtName.Text.Trim();
         objDeparment.Update();
         Response.Redirect("Manage-Department.aspx");
     }

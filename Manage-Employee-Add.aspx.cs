@@ -46,39 +46,39 @@ public partial class Manage_Employee_Add : System.Web.UI.Page
         ddlDepartment.SelectedValue = objEmployee.DepartmentId.ToString();
         if (objEmployee.DOJ.CompareTo(Convert.ToDateTime("01/01/1900")) > 0)
         {
-            txtDOJ.Text = objEmployee.DOJ.ToShortDateString();
+            //txtDOJ.Text = objEmployee.DOJ.ToShortDateString();
         }
         else
         {
-            txtDOJ.Text = "";
+            //txtDOJ.Text = "";
         }
 
         if (objEmployee.DOC.CompareTo(Convert.ToDateTime("01/01/1900")) > 0)
         {
-            txtDOC.Text = objEmployee.DOC.ToShortDateString();
+           // txtDOC.Text = objEmployee.DOC.ToShortDateString();
         }
         else
         {
-            txtDOC.Text = "";
+           // txtDOC.Text = "";
         }
 
         if (objEmployee.DOB.CompareTo(Convert.ToDateTime("01/01/1900")) > 0)
         {
-            txtDOB.Text = objEmployee.DOB.ToShortDateString();
+           // txtDOB.Text = objEmployee.DOB.ToShortDateString();
         }
         else
         {
-            txtDOB.Text = "";
+           // txtDOB.Text = "";
         }
 
         ddlStatus.SelectedValue = objEmployee.Status.ToString();
-        txtAddress.Text = objEmployee.Address.ToString();
-        txtCity.Text = objEmployee.City.ToString();
-        txtState.Text = objEmployee.State.ToString();
-        txtZipcode.Text = objEmployee.Zip.ToString();
-        txtPhone.Text = objEmployee.Phone.ToString();
-        txtMobile.Text = objEmployee.Mobile.ToString();
-        txtEmail.Text = objEmployee.Email.ToString();
+        //txtAddress.Text = objEmployee.Address.ToString();
+        //txtCity.Text = objEmployee.City.ToString();
+        //txtState.Text = objEmployee.State.ToString();
+        //txtZipcode.Text = objEmployee.Zip.ToString();
+        //txtPhone.Text = objEmployee.Phone.ToString();
+        //txtMobile.Text = objEmployee.Mobile.ToString();
+        //txtEmail.Text = objEmployee.Email.ToString();
         txtBio.Text = objEmployee.Bio.ToString();
         txtDegree.Text = objEmployee.Degree.ToString();
         txtPhoto.Text = objEmployee.Photo.ToString();
@@ -93,56 +93,56 @@ public partial class Manage_Employee_Add : System.Web.UI.Page
     protected void btnSave_Click(object sender, EventArgs e)
     {
         string sFilename = Guid.NewGuid().ToString();
-        if (filePhoto.HasFile)
-        {
-            string sPath = "";
-            string sFile = filePhoto.FileName.ToString();
-            sPath = Server.MapPath("EmpPhotos");
-            sFilename = sFilename + sFile.Substring(sFile.LastIndexOf("."));
-            filePhoto.SaveAs(sPath + "\\" + sFilename);
-        }
-        else
-        {
-            sFilename = "NoImage.jpg";
-        }
-        objEmployee.Name = txtName.Text.Trim();
-        objEmployee.Designation = txtDesignation.Text.Trim();
-        objEmployee.DepartmentId = Convert.ToInt32(ddlDepartment.SelectedValue);
-        if (txtDOJ.Text.Trim() != "")
-        {
-            objEmployee.DOJ = Convert.ToDateTime(txtDOJ.Text.Trim());
-        }
-        else
-        {
-            objEmployee.DOJ = Convert.ToDateTime("01/01/1900");
-        }
-        if (txtDOC.Text.Trim() != "")
-        {
-            objEmployee.DOC = Convert.ToDateTime(txtDOC.Text.Trim());
-        }
-        else
-        {
-            objEmployee.DOC = Convert.ToDateTime("01/01/1900");
-        }
-        objEmployee.Status = Convert.ToInt32(ddlStatus.SelectedValue);
-        if (txtDOB.Text.Trim() != "")
-        {
-            objEmployee.DOB = Convert.ToDateTime(txtDOB.Text.Trim());
-        }
-        else
+        //if (filePhoto.HasFile)
+        //{
+        //    string sPath = "";
+        //    string sFile = filePhoto.FileName.ToString();
+        //    sPath = Server.MapPath("EmpPhotos");
+        //    sFilename = sFilename + sFile.Substring(sFile.LastIndexOf("."));
+        //    filePhoto.SaveAs(sPath + "\\" + sFilename);
+        //}
+        //else
+        //{
+        //    sFilename = "NoImage.jpg";
+        //}
+        //objEmployee.Name = txtName.Text.Trim();
+        //objEmployee.Designation = txtDesignation.Text.Trim();
+        //objEmployee.DepartmentId = Convert.ToInt32(ddlDepartment.SelectedValue);
+        //if (txtDOJ.Text.Trim() != "")
+        //{
+        //    objEmployee.DOJ = Convert.ToDateTime(txtDOJ.Text.Trim());
+        //}
+        //else
+        //{
+        //    objEmployee.DOJ = Convert.ToDateTime("01/01/1900");
+        //}
+        //if (txtDOC.Text.Trim() != "")
+        //{
+        //    //objEmployee.DOC = Convert.ToDateTime(txtDOC.Text.Trim());
+        //}
+        //else
+        //{
+        //    objEmployee.DOC = Convert.ToDateTime("01/01/1900");
+        //}
+        //objEmployee.Status = Convert.ToInt32(ddlStatus.SelectedValue);
+        //if (txtDOB.Text.Trim() != "")
+        //{
+        //    //objEmployee.DOB = Convert.ToDateTime(txtDOB.Text.Trim());
+        //}
+        //else
         {
             objEmployee.DOB = Convert.ToDateTime("01/01/1900");
         }
-        objEmployee.Address = txtAddress.Text.Trim();
-        objEmployee.City = txtCity.Text.Trim();
-        objEmployee.State= txtState.Text.Trim();
-        objEmployee.Zip = txtZipcode.Text.Trim();
-        objEmployee.Phone = txtPhone.Text.Trim();
-        objEmployee.Mobile = txtMobile.Text.Trim();
-        objEmployee.Email= txtEmail.Text.Trim();
+        //objEmployee.Address = txtAddress.Text.Trim();
+        //objEmployee.City = txtCity.Text.Trim();
+        //objEmployee.State = txtState.Text.Trim();
+        //objEmployee.Zip = txtZipcode.Text.Trim();
+        //objEmployee.Phone = txtPhone.Text.Trim();
+        //objEmployee.Mobile = txtMobile.Text.Trim();
+        //objEmployee.Email = txtEmail.Text.Trim();
         objEmployee.Bio = txtBio.Text.Trim();
         objEmployee.Degree = txtDegree.Text.Trim();
-        objEmployee.Photo = sFilename;
+        //objEmployee.Photo = sFilename;
         objEmployee.Insert();
         Response.Redirect("Manage-Employee.aspx");
     }
@@ -151,53 +151,53 @@ public partial class Manage_Employee_Add : System.Web.UI.Page
     {
         objEmployee.EmployeeId = Convert.ToInt32(Request["EmployeeId"].ToString());
         string sFilename = Guid.NewGuid().ToString();
-        if (filePhoto.HasFile)
-        {
-            string sPath = "";
-            string sFile = filePhoto.FileName.ToString();
-            sPath = Server.MapPath("EmpPhotos");
-            sFilename = sFilename + sFile.Substring(sFile.LastIndexOf("."));
-            filePhoto.SaveAs(sPath + "\\" + sFilename);
-        }
-        else
-        {
-            sFilename = txtPhoto.Text;
-        }
-        objEmployee.Name = txtName.Text.Trim();
-        objEmployee.Designation = txtDesignation.Text.Trim();
-        objEmployee.DepartmentId = Convert.ToInt32(ddlDepartment.SelectedValue);
-        if (txtDOJ.Text.Trim() != "")
-        {
-            objEmployee.DOJ = Convert.ToDateTime(txtDOJ.Text.Trim());
-        }
-        else
-        {
-            objEmployee.DOJ = Convert.ToDateTime("01/01/1900");
-        }
-        if (txtDOC.Text.Trim() != "")
-        {
-            objEmployee.DOC = Convert.ToDateTime(txtDOC.Text.Trim());
-        }
-        else
-        {
-            objEmployee.DOC = Convert.ToDateTime("01/01/1900");
-        }
-        objEmployee.Status = Convert.ToInt32(ddlStatus.SelectedValue);
-        if (txtDOB.Text.Trim() != "")
-        {
-            objEmployee.DOB = Convert.ToDateTime(txtDOB.Text.Trim());
-        }
-        else
-        {
-            objEmployee.DOB = Convert.ToDateTime("01/01/1900");
-        }
-        objEmployee.Address = txtAddress.Text.Trim();
-        objEmployee.City = txtCity.Text.Trim();
-        objEmployee.State = txtState.Text.Trim();
-        objEmployee.Zip = txtZipcode.Text.Trim();
-        objEmployee.Phone = txtPhone.Text.Trim();
-        objEmployee.Mobile = txtMobile.Text.Trim();
-        objEmployee.Email = txtEmail.Text.Trim();
+        //if (filePhoto.HasFile)
+        //{
+        //    string sPath = "";
+        //    string sFile = filePhoto.FileName.ToString();
+        //    sPath = Server.MapPath("EmpPhotos");
+        //    sFilename = sFilename + sFile.Substring(sFile.LastIndexOf("."));
+        //    filePhoto.SaveAs(sPath + "\\" + sFilename);
+        //}
+        //else
+        //{
+        //    sFilename = txtPhoto.Text;
+        //}
+        //objEmployee.Name = txtName.Text.Trim();
+        //objEmployee.Designation = txtDesignation.Text.Trim();
+        //objEmployee.DepartmentId = Convert.ToInt32(ddlDepartment.SelectedValue);
+        //if (txtDOJ.Text.Trim() != "")
+        //{
+        //    objEmployee.DOJ = Convert.ToDateTime(txtDOJ.Text.Trim());
+        //}
+        //else
+        //{
+        //    objEmployee.DOJ = Convert.ToDateTime("01/01/1900");
+        //}
+        //if (txtDOC.Text.Trim() != "")
+        //{
+        //    objEmployee.DOC = Convert.ToDateTime(txtDOC.Text.Trim());
+        //}
+        //else
+        //{
+        //    objEmployee.DOC = Convert.ToDateTime("01/01/1900");
+        //}
+        //objEmployee.Status = Convert.ToInt32(ddlStatus.SelectedValue);
+        //if (txtDOB.Text.Trim() != "")
+        //{
+        //    objEmployee.DOB = Convert.ToDateTime(txtDOB.Text.Trim());
+        //}
+        //else
+        //{
+        //    objEmployee.DOB = Convert.ToDateTime("01/01/1900");
+        //}
+        //objEmployee.Address = txtAddress.Text.Trim();
+        //objEmployee.City = txtCity.Text.Trim();
+        //objEmployee.State = txtState.Text.Trim();
+        //objEmployee.Zip = txtZipcode.Text.Trim();
+        //objEmployee.Phone = txtPhone.Text.Trim();
+        //objEmployee.Mobile = txtMobile.Text.Trim();
+        //objEmployee.Email = txtEmail.Text.Trim();
         objEmployee.Bio = txtBio.Text.Trim();
         objEmployee.Degree = txtDegree.Text.Trim();
         objEmployee.Photo = sFilename;
